@@ -94,12 +94,12 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // May 1st, 2016
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1231006505; // May 1st, 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1231006505; // May 1st, 2017
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // November 15th, 2016.
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1231006505; // November 15th, 2016.
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1231006505; // November 15th, 2017.
 
         // The best chain should have at least this much work.
@@ -149,7 +149,7 @@ public:
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
 
         checkpointData = {
             {
@@ -188,17 +188,17 @@ public:
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
         consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0; // January 1, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1231006505; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1231006505; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // March 1st, 2016
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1231006505; // March 1st, 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1231006505; // May 1st, 2017
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // May 1st 2016
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1231006505; // May 1st 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1231006505; // May 1st 2017
 
         // The best chain should have at least this much work.
@@ -238,7 +238,7 @@ public:
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
 
 
         checkpointData = {
